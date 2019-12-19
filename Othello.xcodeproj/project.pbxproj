@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,11 @@
 		2B7A75D31CA6932D009A81C9 /* OthelloGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7A75D21CA6932D009A81C9 /* OthelloGame.swift */; };
 		2B7A75D51CA69753009A81C9 /* MonteCarloTreeSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7A75D41CA69753009A81C9 /* MonteCarloTreeSearch.swift */; };
 		2B7A75D71CA69817009A81C9 /* OthelloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7A75D61CA69817009A81C9 /* OthelloView.swift */; };
+		2BC942C7210C8460008495C5 /* Array+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC942C6210C8460008495C5 /* Array+Additions.swift */; };
+		2BC942C9210C8487008495C5 /* MCTSNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC942C8210C8487008495C5 /* MCTSNode.swift */; };
+		2BC942CB210C84AF008495C5 /* OthelloMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC942CA210C84AF008495C5 /* OthelloMove.swift */; };
+		2BC942CD210DCC7D008495C5 /* OthelloInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC942CC210DCC7D008495C5 /* OthelloInteractor.swift */; };
+		2BC942CF210DCC86008495C5 /* OthelloViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC942CE210DCC86008495C5 /* OthelloViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +35,11 @@
 		2B7A75D21CA6932D009A81C9 /* OthelloGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OthelloGame.swift; sourceTree = "<group>"; };
 		2B7A75D41CA69753009A81C9 /* MonteCarloTreeSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonteCarloTreeSearch.swift; sourceTree = "<group>"; };
 		2B7A75D61CA69817009A81C9 /* OthelloView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OthelloView.swift; sourceTree = "<group>"; };
+		2BC942C6210C8460008495C5 /* Array+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Additions.swift"; sourceTree = "<group>"; };
+		2BC942C8210C8487008495C5 /* MCTSNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCTSNode.swift; sourceTree = "<group>"; };
+		2BC942CA210C84AF008495C5 /* OthelloMove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OthelloMove.swift; sourceTree = "<group>"; };
+		2BC942CC210DCC7D008495C5 /* OthelloInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OthelloInteractor.swift; sourceTree = "<group>"; };
+		2BC942CE210DCC86008495C5 /* OthelloViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OthelloViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +61,7 @@
 				2B7A759C1CA5B378009A81C9 /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		2B7A759C1CA5B378009A81C9 /* Products */ = {
 			isa = PBXGroup;
@@ -63,12 +74,10 @@
 		2B7A759D1CA5B379009A81C9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				2B7A759E1CA5B379009A81C9 /* AppDelegate.swift */,
-				2B7A75A01CA5B379009A81C9 /* ViewController.swift */,
-				2B7A75D61CA69817009A81C9 /* OthelloView.swift */,
-				2B7A75D01CA5EE4D009A81C9 /* OthelloBoard.swift */,
-				2B7A75D21CA6932D009A81C9 /* OthelloGame.swift */,
-				2B7A75D41CA69753009A81C9 /* MonteCarloTreeSearch.swift */,
+				2BC942C2210C83DE008495C5 /* App */,
+				2BC942C3210C83EC008495C5 /* Othello */,
+				2BC942C4210C83FB008495C5 /* Monte Carlo Tree Search */,
+				2BC942C5210C8450008495C5 /* Utils */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -82,6 +91,45 @@
 				2B7A75AA1CA5B379009A81C9 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		2BC942C2210C83DE008495C5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2B7A759E1CA5B379009A81C9 /* AppDelegate.swift */,
+				2B7A75A01CA5B379009A81C9 /* ViewController.swift */,
+				2B7A75D61CA69817009A81C9 /* OthelloView.swift */,
+				2BC942CC210DCC7D008495C5 /* OthelloInteractor.swift */,
+				2BC942CE210DCC86008495C5 /* OthelloViewModel.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2BC942C3210C83EC008495C5 /* Othello */ = {
+			isa = PBXGroup;
+			children = (
+				2B7A75D01CA5EE4D009A81C9 /* OthelloBoard.swift */,
+				2B7A75D21CA6932D009A81C9 /* OthelloGame.swift */,
+				2BC942CA210C84AF008495C5 /* OthelloMove.swift */,
+			);
+			path = Othello;
+			sourceTree = "<group>";
+		};
+		2BC942C4210C83FB008495C5 /* Monte Carlo Tree Search */ = {
+			isa = PBXGroup;
+			children = (
+				2B7A75D41CA69753009A81C9 /* MonteCarloTreeSearch.swift */,
+				2BC942C8210C8487008495C5 /* MCTSNode.swift */,
+			);
+			path = "Monte Carlo Tree Search";
+			sourceTree = "<group>";
+		};
+		2BC942C5210C8450008495C5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2BC942C6210C8460008495C5 /* Array+Additions.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -111,16 +159,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Petteri Kamppuri";
 				TargetAttributes = {
 					2B7A759A1CA5B378009A81C9 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
 			buildConfigurationList = 2B7A75961CA5B378009A81C9 /* Build configuration list for PBXProject "Othello" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -157,9 +206,14 @@
 			files = (
 				2B7A75D71CA69817009A81C9 /* OthelloView.swift in Sources */,
 				2B7A75D11CA5EE4D009A81C9 /* OthelloBoard.swift in Sources */,
+				2BC942CD210DCC7D008495C5 /* OthelloInteractor.swift in Sources */,
 				2B7A75A11CA5B379009A81C9 /* ViewController.swift in Sources */,
+				2BC942C7210C8460008495C5 /* Array+Additions.swift in Sources */,
 				2B7A75D51CA69753009A81C9 /* MonteCarloTreeSearch.swift in Sources */,
 				2B7A759F1CA5B379009A81C9 /* AppDelegate.swift in Sources */,
+				2BC942CF210DCC86008495C5 /* OthelloViewModel.swift in Sources */,
+				2BC942CB210C84AF008495C5 /* OthelloMove.swift in Sources */,
+				2BC942C9210C8487008495C5 /* MCTSNode.swift in Sources */,
 				2B7A75D31CA6932D009A81C9 /* OthelloGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,13 +249,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -223,7 +287,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -241,13 +305,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -263,7 +337,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -277,10 +351,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.pkamppur.Othello;
 				PRODUCT_NAME = Othello;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -290,10 +368,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.pkamppur.Othello;
 				PRODUCT_NAME = Othello;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
